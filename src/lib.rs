@@ -150,11 +150,6 @@ mod serial_jtag_printer {
                     // Still wasn't able to drain the FIFO - early return
                     // This is important so we don't block forever if there is no host attached.
                     return;
-                } else {
-                    unsafe {
-                        // Good to go!
-                        TIMED_OUT = false;
-                    }
                 }
             }
 
